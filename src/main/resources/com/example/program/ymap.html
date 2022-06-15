@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, maximum-scale=1" />
+    <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU" type="text/javascript"></script>
+    <script type="text/javascript">
+    var myMap;
+    ymaps.ready(init);
+    function init() {
+        var ymap=document.createElement('div');
+        ymap.id="ymap";
+        document.body.appendChild(ymap);
+        myMap = new ymaps.Map("ymap", {
+            // Порядок по умолчнию: «широта, долгота».
+            center: [56.85, 35.90],
+            // от 0 (весь мир) до 19.
+            zoom: 11,
+            behaviors:
+            [   'scrollZoom',
+                'drag',
+                'multiTouch']},
+            {   yandexMapDisablePoiInteractivity: true});
+        myMap.controls
+        .add('zoomControl', { right: 5, top: 40 })
+        .add('typeSelector');
+        myMap.setType('yandex#hybrid');
+
+        var Parkings =
+        [   {   id: 0,
+                name: "Центральный",
+                coordinates: [56.8555, 35.9064],
+                div: document.getElementById("p0")},
+             {   id: 1,
+                name: "Микро Юность",
+                coordinates: [56.8842, 35.8459],
+                div: document.getElementById("p1")},
+             {   id: 2,
+                name: "Микро Южный",
+                coordinates: [56.8171, 35.8850],
+                div: document.getElementById("p2")},
+             {   id: 3,
+                name: "3-Святская улица",
+                coordinates: [56.8425, 35.8480],
+                div: document.getElementById("p3")},
+             {   id: 4,
+                name: "Пролетарский",
+                coordinates: [56.8608, 35.9036],
+                div: document.getElementById("p4")},
+             {   id: 5,
+                name: "Парк Победы",
+                coordinates: [56.8459, 35.9149],
+                div: document.getElementById("p5")},
+             {   id: 6,
+                name: "Пролетарский 2",
+                coordinates: [56.8544, 35.8590],
+                div: document.getElementById("p6")}];
+
+        for(var i=0; i<Parkings.length; i++)
+            addParkingMark(Parkings[i]['name'], Parkings[i]['coordinates'], document.getElementById("p0"), Parkings[i]['div'], myMap);
+    }
+    function addParkingMark(name, coordinates, div0, div, ymap)
+    {   var placemark=new ymaps.Placemark
+        (   coordinates,
+            {   balloonContent: div0.getAttribute("markType")+'\n'+name,
+                iconContent: div0.getAttribute("iconContent")},
+            {   preset: div0.getAttribute("iconPreset"),
+                openBalloonOnClick: false});
+        var placemarkCir=new ymaps.Circle
+        (   [placemark.geometry.getCoordinates(), 30],
+            {},
+            {   fillColor: div0.getAttribute("CircleFill"),
+                strokeColor: div0.getAttribute("CircleStroke")});
+        placemark.events.add('click', function(e)
+        {   div.setAttribute("balloon", "open");});
+
+        ymap.geoObjects.add(placemarkCir)
+                .add(placemark);
+    }
+    </script>
+    <style type="text/css">
+    body, html
+    {   width: 100%;
+        height: 102.1%;
+        background-color: #DCDCDC;
+        transform: translate(-4px, -4px);
+        overflow-x: hidden;
+        overflow-y: hidden;}
+    #ymap
+    {   min-width: 100%;
+        min-height: 102.1%;}
+    </style>
+</head>
+<body>
+    <div id="p0" balloon="close" markType="Стоянка самокатов" CircleFill="#e0320b91" CircleStroke="#a8240791"
+        iconContent="&#x1F17F" iconPreset="twirl#darkorangeIcon"></div>
+    <div id="p1" balloon="close"></div>
+    <div id="p2" balloon="close"></div>
+    <div id="p3" balloon="close"></div>
+    <div id="p4" balloon="close"></div>
+    <div id="p5" balloon="close"></div>
+    <div id="p6" balloon="close"></div>
+</body>
+</html>

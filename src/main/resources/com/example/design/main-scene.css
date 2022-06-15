@@ -1,0 +1,52 @@
+.button-menu{
+    -fx-background-color: linear-gradient(to bottom, #FDC830, #F37335);
+}
+.button-menu:hover{
+    -fx-background-color: linear-gradient(to bottom, #b78c22, #b65526);
+}
+.button-on-vbox{
+    -fx-background-color:  transparent;
+    -fx-border-color: black;
+    -fx-border-width:  0 0 0 1;
+}
+.button-on-vbox:hover{
+    -fx-background-color: linear-gradient(to right, #2b813d, #1dcb35);
+
+    /*-fx-background-color: linear-gradient(to bottom, #c5af7c, #c08466);*/
+}
+.button-on-finish{
+    -fx-background-color: linear-gradient(to right, #7dfae5, #c3ffcc);
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color:linear-gradient(to right, #438578, #59755d);
+
+}
+.button-on-finish:hover{
+    -fx-background-color: linear-gradient(to right, #5ab2a2, #8db990);
+}
+.pane-on-finish{
+    -fx-border-color: linear-gradient(to right, #408578, #7a9d80);
+    -fx-border-radius: 20 20 0 0;
+    -fx-background-radius: 20 20 0 0;
+    -fx-background-color: linear-gradient(to right, #7dfae5, #c3ffcc);
+}
+.vbox{
+    /*-fx-background-color: linear-gradient(to bottom, #ffe3a0, #ffad88);*/
+    -fx-background-color: linear-gradient(to right, #35a24c, #26fa45);
+
+}
+.panel{
+    -fx-background-color: linear-gradient(to right, #34d2bb, #26fa45);
+    -fx-border-width: 2 0 2 0;
+    -fx-border-color: #5d381c;
+}
+.choice-box{
+-fx-background-color: linear-gradient(to right, #7dfae5, #c3ffcc);
+    -fx-background-radius: 10;
+}
+.pane-with-info{
+    -fx-border-color: black;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-background-color: linear-gradient(to right, #7dfae5, #c3ffcc);
+
+}

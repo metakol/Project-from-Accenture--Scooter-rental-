@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" styleClass="background" stylesheets="@../design/admin-change.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.program.AdminChangeUsersController">
+   <children>
+      <Label alignment="CENTER" layoutY="35.0" text="Пользователи" underline="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutY="74.0" prefHeight="570.0" prefWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+         <columns>
+            <TableColumn fx:id="columnID" prefWidth="34.4000244140625" text="ID" />
+            <TableColumn fx:id="columnUsername" prefWidth="75.20000839233398" text="Никнейм" />
+            <TableColumn fx:id="columnEmail" prefWidth="74.4000244140625" text="Почта" />
+            <TableColumn fx:id="columnPhone" prefWidth="83.20001220703125" text="Телефон" />
+            <TableColumn fx:id="columnBalance" prefWidth="64.0" text="Баланс" />
+            <TableColumn fx:id="columnIsAdmin" prefWidth="101.5999755859375" text="Права админа" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="16.0" layoutY="24.0" onMouseClicked="#onClickGoBack" pickOnBounds="true" preserveRatio="true" styleClass="btn-icon" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="15.0">
+         <image>
+            <Image url="@../images/back.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="labelSizeTable" layoutX="8.0" layoutY="65.0" prefHeight="20.0" prefWidth="102.0" text="Всего:" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="65.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

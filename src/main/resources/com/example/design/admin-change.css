@@ -1,0 +1,99 @@
+.background {
+    -fx-background-color: linear-gradient(to bottom, #FDC830, #F37335);
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-border-radius: 30px;
+    -fx-border-width: 4;
+    -fx-border-color: #ffbe69;
+    -fx-background-radius: 30px;
+}
+
+.button:hover {
+    -fx-background-color: orange;
+}
+
+.button-add:hover {
+    -fx-background-color: #c7ff71;
+}
+
+.button-add {
+    /*-fx-border-color: #93e393;*/
+    -fx-border-color: linear-gradient(to left, #6ee749, #86c075);
+}
+
+.button-change {
+    /*-fx-border-color: #ffbe69;*/
+    /*-fx-border-color: linear-gradient(to left, #ffa054, #ffa870);*/
+}
+
+.button-remove {
+    /*-fx-border-color: #b20101;*/
+    -fx-border-color: linear-gradient(to left, #ad2727, #d02b2b);
+}
+
+.button-remove:hover {
+    -fx-background-color: linear-gradient(to left, #de7e7e, #ffc8c8);
+}
+
+
+.tab {
+    -fx-background-color: pink;
+    /*-fx-border-color: red;*/
+    -fx-background-radius: 8px;
+    /*-fx-border-radius: 8px;*/
+}
+
+.tab-add {
+    /*-fx-border-color: #93e393;*/
+    -fx-background-color: linear-gradient(to left, #6ee749, #86c075);
+}
+
+.tab-change {
+    /*-fx-border-color: #ffbe69;*/
+    -fx-background-color: linear-gradient(to left, #ffe97b, #ffe44f);
+}
+
+.tab-remove {
+    /*-fx-border-color: #b20101;*/
+    -fx-background-color: linear-gradient(to left, #e77676, #ec8888);
+}
+
+/*
+.tab:hover{
+    -fx-background-color: #c27c87;
+}
+.tab-pane {
+
+}
+ */
+
+.combo-box {
+    -fx-font-size: 13;
+    -fx-background-radius: 10px;
+    /*-fx-background-color: #adeedd;*/
+    /*-fx-background-color:  linear-gradient(to bottom, #beebff, #ffb6dc);*/
+    -fx-background-color: linear-gradient(to bottom, #97f8aa, #53e3b8);
+    /*-fx-background-color:  linear-gradient(to bottom, #84ff9c, #44d960);*/
+    /*-fx-background-color: #6fff87;*/
+
+    -fx-border-radius: 10px;
+    -fx-border-color: white;
+}
+
+.text-field {
+    -fx-font-size: 14;
+}
+
+.tab-header-background {
+    -fx-background-color: transparent;
+    /*-fx-border-color: #ffffff;*/
+    /*-fx-border-width: 5px;*/
+}
+
+.label-info {
+    -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-font-size: 15;
+}

@@ -1,0 +1,28 @@
+.anho-pane{
+    /*-fx-border-color: black;*/
+    /*!*-fx-border-radius: 20;*/
+    /* -fx-background-radius: 20;*!*/
+    /* -fx-background-color: #f1f1f1;*/
+
+    -fx-border-color: black;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-background-color: linear-gradient(to right, #abfff1, #c3ffcc);
+}
+.image{
+
+}
+.button{
+    -fx-background-radius: 0 10 10 0;
+     -fx-border-radius: 0 10 10 0;
+    -fx-background-color: #FFCC66;
+    -fx-background-color: linear-gradient(to left, #50e06e, #8bfacf);
+    -fx-border-width: 0 0 0 1;
+    -fx-border-color: black;
+}
+
+.button:hover{
+    /*-fx-background-color: #b48d46;*/
+    -fx-background-color: linear-gradient(to left, #2a7a3a, #19b430);
+
+}

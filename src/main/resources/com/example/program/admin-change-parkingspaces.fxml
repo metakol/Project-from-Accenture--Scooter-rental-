@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" styleClass="background" stylesheets="@../design/admin-change.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.program.AdminChangeParkingSpacesController">
+   <children>
+      <Label alignment="CENTER" layoutY="35.0" text="Парковочные места" underline="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <TabPane layoutY="383.0" prefHeight="238.0" prefWidth="360.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <tabs>
+          <Tab styleClass="tab-add" text="Добавление">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="146.0" layoutY="160.0" mnemonicParsing="false" onMouseClicked="#onClickAdd" prefHeight="26.0" prefWidth="203.0" styleClass="button-add" text="Добавить" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Button>
+                        <Label fx:id="labelProcessForAdd" alignment="CENTER" layoutX="166.0" layoutY="134.0" prefHeight="36.0" prefWidth="176.0" styleClass="label-info" text="Данные введены не коректно!" underline="true" visible="false" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="geopositionForAdd" alignment="CENTER_RIGHT" layoutX="181.0" layoutY="44.0" prefHeight="30.0" prefWidth="76.0" promptText="0.00,0.00">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="63.0" layoutY="49.0" prefHeight="20.0" prefWidth="118.0" text="Геопозиция:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="radiusForAdd" alignment="CENTER_RIGHT" layoutX="181.0" layoutY="82.0" prefHeight="30.0" prefWidth="76.0" promptText="10.5">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="63.0" layoutY="87.0" prefHeight="20.0" prefWidth="118.0" text="Радиус:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab styleClass="tab-change" text="Изменение">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="buttonChange" disable="true" layoutX="190.0" layoutY="160.0" mnemonicParsing="false" onMouseClicked="#onClickChange" prefHeight="40.0" prefWidth="160.0" styleClass="button-change" text="Изменить" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="CENTER" layoutX="9.0" prefHeight="36.0" prefWidth="342.0" styleClass="label-info" text="Для изменения выберите поле в таблице" underline="true" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="geopositionForChange" alignment="CENTER_RIGHT" layoutX="181.0" layoutY="44.0" prefHeight="30.0" prefWidth="76.0" promptText="0.00,0.00" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="103.0" AnchorPane.topAnchor="44.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font></TextField>
+                        <Label layoutX="63.0" layoutY="49.0" prefHeight="20.0" prefWidth="118.0" text="Геопозиция:" AnchorPane.leftAnchor="63.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="radiusForChange" alignment="CENTER_RIGHT" layoutX="181.0" layoutY="82.0" prefHeight="30.0" prefWidth="76.0" promptText="10.5" AnchorPane.topAnchor="82.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="63.0" layoutY="87.0" prefHeight="20.0" prefWidth="118.0" text="Радиус:" AnchorPane.leftAnchor="63.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelProcessForChange" alignment="CENTER" prefHeight="27.0" prefWidth="340.0" styleClass="label-info" text="Данные введены не коректно" underline="true" visible="false" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab styleClass="tab-remove" text="Удаление">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="154.0" layoutY="169.0" mnemonicParsing="false" onMouseClicked="#onClickRemove" prefHeight="26.0" styleClass="button-remove" text="Удалить" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <Label alignment="CENTER" layoutX="10.0" prefHeight="90.0" prefWidth="341.0" styleClass="label-info" text="Для удаления выберите поле в таблице и нажмите на кнопку" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="15.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="labelProcessForRemove" prefHeight="42.0" text="Удаление этого поле не возможно, т.к. в БД имеются самокаты на этом месте" textAlignment="CENTER" textFill="#8c0000" visible="false" wrapText="true" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TableView fx:id="table" layoutY="74.0" prefHeight="289.0" prefWidth="360.0" AnchorPane.bottomAnchor="260.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+         <columns>
+            <TableColumn fx:id="columnID" prefWidth="80.79998779296875" text="ID" />
+            <TableColumn fx:id="columnGeoposition" prefWidth="158.4000244140625" text="Точка на карте" />
+            <TableColumn fx:id="columnRadius" prefWidth="119.20001220703125" text="Радиус парковки" />
+         </columns>
+      </TableView>
+      <Label layoutX="8.0" layoutY="367.0" text="ID выбранной парковки: " AnchorPane.bottomAnchor="240.0" AnchorPane.leftAnchor="8.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelID" layoutX="183.0" layoutY="367.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.bottomAnchor="240.0" AnchorPane.leftAnchor="183.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSizeTable" alignment="CENTER_RIGHT" layoutX="259.0" layoutY="367.0" prefHeight="20.0" prefWidth="102.0" text="Всего:" AnchorPane.bottomAnchor="240.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="16.0" layoutY="24.0" onMouseClicked="#onClickGoBack" pickOnBounds="true" preserveRatio="true" styleClass="btn-icon" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="15.0">
+         <image>
+            <Image url="@../images/back.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

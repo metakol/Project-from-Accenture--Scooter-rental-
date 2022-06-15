@@ -1,0 +1,13 @@
+.background {
+    -fx-background-color: linear-gradient(to bottom, #FDC830, #F37335)
+}
+.button {
+    -fx-background-color: transparent;
+    -fx-border-radius: 30px;
+    -fx-border-width: 4;
+    -fx-border-color: #ffbe69;
+    -fx-background-radius: 30px;
+}
+.button:hover {
+    -fx-background-color: orange;
+}

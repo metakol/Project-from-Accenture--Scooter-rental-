@@ -1,0 +1,37 @@
+.button {
+    -fx-background-color: #ff9461;
+    -fx-background-radius:  0 0 40 40;
+    -fx-border-color: black;
+    -fx-border-radius: 0 0 39 39;
+}
+
+.button:hover{
+    -fx-background-color: #da6c3a;
+}
+
+.root{
+    -fx-background-color:  linear-gradient(to bottom, #FDC830, #F37335);
+}
+
+.pane{
+    -fx-border-color:  fff1e6;
+    -fx-border-width:  5;
+    -fx-border-radius:  40;
+}
+
+.leave-button{
+    -fx-background-color: #696464;
+    -fx-text-fill:  white;
+    -fx-border-color:  black;
+    -fx-border-width:  1 0 0 0;
+    -fx-background-radius:  0;
+}
+
+.leave-button:hover{
+    -fx-background-color: #4d0000;
+}
+
+.text-field{
+    -fx-background-color: #ffe5d8;
+    -fx-border-color: #3a3a3a;
+}

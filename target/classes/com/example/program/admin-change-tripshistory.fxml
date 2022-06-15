@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" styleClass="background" stylesheets="@../design/admin-change.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.program.AdminChangeTripsHistoryController">
+   <children>
+      <Label alignment="CENTER" layoutY="35.0" text="История поездок" underline="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutY="74.0" prefHeight="550.0" prefWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0">
+         <columns>
+            <TableColumn fx:id="columnID" prefWidth="34.4000244140625" text="ID" />
+            <TableColumn fx:id="columnUserID" prefWidth="75.20000839233398" text="Пользователь" />
+            <TableColumn fx:id="columnScooterID" prefWidth="74.4000244140625" text="Самокат" />
+            <TableColumn fx:id="columnTariffID" prefWidth="66.0" text="Тариф" />
+            <TableColumn fx:id="columnIsFinished" prefWidth="64.0" text="Завершена" />
+            <TableColumn fx:id="columnCost" prefWidth="64.0" text="стоимость" />
+            <TableColumn fx:id="columnStartParkingID" prefWidth="82.0" text="нач. парковка" />
+            <TableColumn fx:id="columnFinishParkingID" prefWidth="64.0" text="кон. парковка" />
+            <TableColumn fx:id="columnTimeStart" prefWidth="64.0" text="время начала" />
+            <TableColumn fx:id="columnTimeFinish" prefWidth="64.0" text="время конца" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="16.0" layoutY="24.0" onMouseClicked="#onClickGoBack" pickOnBounds="true" preserveRatio="true" styleClass="btn-icon" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="15.0">
+         <image>
+            <Image url="@../images/back.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="labelSizeTable" layoutX="8.0" layoutY="65.0" prefHeight="20.0" prefWidth="102.0" text="Всего:" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="65.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
